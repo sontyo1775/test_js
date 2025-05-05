@@ -180,7 +180,25 @@ noneFunc();
 input.value = test111;
 
 
+let executionBtn = document.querySelector('#execution-btn');
+executionBtn.addEventListener('click', function(){
+    let textInput = document.querySelector('#text-input');
+    let inputText = document.querySelector('#input-result');
+    const result = countChars(textInput.value);
+
+    // オブジェクトを「キー: 値」の文字列に変換
+    if (result) {
+        let displayText = Object.entries(result)
+            .map(([char, count]) => `${char}: ${count}`)
+            .join(', ');
+        inputText.textContent = displayText;
+    } else {
+        inputText.value = ''; // 空欄やnullのとき
+    }
+})
+// 入力された文字列の数字をカウントする処理
 function countChars(text) {
+    console.log(text);
     let result = {};
 
     for (let i = 0; i < text.length; i++) {
@@ -192,9 +210,6 @@ function countChars(text) {
             result[char] = 1;
         }
     }
-
+    console.log(result);
     return result;
 }
-
-let textObj = countChars("apple"); 
-console.log(textObj.p);

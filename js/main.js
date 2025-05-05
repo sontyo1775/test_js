@@ -1,6 +1,4 @@
-// findMax([3, 7, 2, 9, 4]) // => 9
-// findMax([-5, -1, -8])     // => -1
-
+// 最大値を返す処理
 let numberArray = [1,3,14,51,34,5];
 let returnResult = findMax(numberArray);
 
@@ -17,8 +15,8 @@ function findMax(numbers){
     }
     return result;
 }
-// 引数として与えられた文字列を、逆順にして返す関数 reverseString を作成してください。
 
+// 文字列を逆にして返却する処理
 let textString = '今日からテスト';
 let returnText = reverseString(textString);
 console.log(returnText);
@@ -49,10 +47,10 @@ let test1 = getDiscountRate(objectLank.gold);
 let test2 = getDiscountRate(objectLank.silver);
 let test3 = getDiscountRate(objectLank.bronze);
 let test4 = getDiscountRate(objectLank.test);
-console.log(test1);
-console.log(test2);
-console.log(test3);
-console.log(test4);
+// console.log(test1);
+// console.log(test2);
+// console.log(test3);
+// console.log(test4);
 
 function getDiscountRate(lank){
     let lankValue = '';
@@ -75,11 +73,12 @@ function getDiscountRate(lank){
     return lankValue;
 }
 
-console.log(getDiscountRate2('gold'));
-console.log(getDiscountRate2('silver'));
-console.log(getDiscountRate2('bronze'));
-console.log(getDiscountRate2('test'));
+// console.log(getDiscountRate2('gold'));
+// console.log(getDiscountRate2('silver'));
+// console.log(getDiscountRate2('bronze'));
+// console.log(getDiscountRate2('test'));
 
+// ランクによってNoを返す処理
 function getDiscountRate2(lank){
     let lankNumber = lank;
     let objectLank = {
@@ -97,8 +96,9 @@ const products = [
     { name: "パイナップル", price: 300, stock: 0 }
 ];
 
-console.log(productsFunc(products));
+// console.log(productsFunc(products));
 
+// ストックがあるものの名前を返却する処理
 function productsFunc(products){
     let productArr = [];
 
@@ -116,8 +116,9 @@ const products2 = [
     { name: "みかん", price: 120, stock: 5 },
     { name: "パイナップル", price: 300, stock: 1 }
 ];
-console.log(productsFunc2(products2));
+// console.log(productsFunc2(products2));
 
+// ストックがあるものの合計の計算する処理
 function productsFunc2(products){
     let result = 0;
     let productArr = [];
@@ -154,7 +155,7 @@ function productsFunc2(products){
 
 // aTest2(); // 関数の実行
 
-// 非同期
+// 非同期でインプットの中身を設定する処理
 let test111 = 'test';
 
 function asyncFunc(num){
